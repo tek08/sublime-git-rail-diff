@@ -1,1 +1,19 @@
-This is a test of committing to GitHub.  I have no idea what I'm doing <insert Science Dog Here>
+=== Git Rail Diff ===
+
+This plugin highlights lines you have added since your last git commit.  This
+has been the result of some quick hacking, and so probably has a long way to go
+before I'd consider it useful for all.
+
+If you feel like contributing, please feel free to ping me as I'd be happy to
+have your help.
+
+
+== Installation ==
+
+To add it as a plugin to Sublime, checkout the folder GitHighlightDiff to your
+Packages/ dir, wherever that may be for your particular system.  (I work on OSX,
+where it's at ~/Library/Application Support/Sublime Text 2/Packages/).  'git',
+the binary, will need to be in your path.
+
+== Contact ==
+Need help, want to touch base?  Please feel free to email me (listed on GitHub).
