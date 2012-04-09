@@ -13,6 +13,7 @@ __author__ = 'petek@google.com (Pete Kruskall)'
 import os.path
 import subprocess
 
+import sublime
 import sublime_plugin
 
 
@@ -25,7 +26,17 @@ class GitHighlightDiff(sublime_plugin.EventListener):
     for r in old_regions:
       view.add_regions('GitDiff', [r], '', 0)
 
-    view.add_regions('GitDiff', regions, 'comment', 0)
+    print str(regions)
+
+    # TODO(tek): Make this a setting.
+    just_show_gutter = False
+    # TODO(tek): Make this a setting.
+    color_style = "comment"
+
+    if just_show_gutter:
+      regions = [sublime.Region(r.a, r.a) for r in regions]
+
+    view.add_regions('GitDiff', regions, color_style, "bookmark")
 
   def RetrieveOutputFromSubproc(self, proc):
     """Returns lines returned from a subprocess command."""
